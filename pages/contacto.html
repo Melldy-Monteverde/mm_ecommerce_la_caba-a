@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frigorifico La Cabaña</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/img_logos_banners/flc_logo.jpg" type="image/x-icon">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/6ad2795456.js" crossorigin="anonymous"></script>
+    <!-- end font awesome -->
+</head>
+<body>
+    <!-- header -->
+    <header id="top" class="container--1">
+        <div class="header__logo">
+            <a href="#"><img src="../img/img_logos_banners/logo_la_cabaña.png" alt="logo la cabaña" class="logo--desktop"></a>
+        </div>
+        <!-- nav -->
+        <div class="navBar container--2">
+            <nav id="header__navBar">
+                <ul class="navBAr__ul">
+                    <li class="navBar__li"><a href="../index.html" class="navBar__li--links">Home</a></li>
+                    <li class="navBar__li"><a href="vacunos.html" class="navBar__li--links">Vacuno</a></li>
+                    <li class="navBar__li"><a href="aves.html" class="navBar__li--links">Aves</a></li>
+                    <li class="navBar__li"><a href="cerdo.html" class="navBar__li--links">Cerdo</a></li>
+                    <li class="navBar__li"><a href="embutidos_achuras.html" class="navBar__li--links">Embutidos y Achuras</a></li>
+                    <li class="navBar__li"><a href="contacto.html" class="navBar__li--links">Contactos</a></li>
+                </ul>
+                <!-- btn buscar y barra de busqueda -->
+                <div class="search__bar--conatiner">
+                    <label for="buscar"></label>
+                    <input type="search" name="buscar" id="search-block" placeholder="Buscar producto">
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- trabajar estilos del iframe -->
+    <div class="form__container"> 
+        <div class="sucursales__container">
+            <iframe class="mapa__locales local--juramento" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.6087006337766!2d-58.46101808507082!3d-34.563461562875545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d440442163%3A0x43b0ea41ee7d9200!2sAv.%20Juramento%202632%2C%20C1428%20CABA!5e0!3m2!1ses-419!2sar!4v1647268186840!5m2!1ses-419!2sar" width="50%" height="450" style="border:1px solid black;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe class="mapa__locales local--lacroze" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.8478405768424!2d-58.45481078514971!3d-34.58271646389348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5e6095d1d4f%3A0x6494f0d01fe7318c!2sAv.%20Federico%20Lacroze%203731%2C%20C1427EDC%20CABA!5e0!3m2!1ses-419!2sar!4v1648681039815!5m2!1ses-419!2sar" width="50%" height="450" style="border:1px solid red;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="mapa__locales local--nazca" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6231339760307!2d-58.50232078514949!3d-34.58840126419407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6491d6233e9%3A0x9d9b5cffb47e3648!2sAv.%20Nazca%204401%2C%20C1419DFH%20CABA!5e0!3m2!1ses-419!2sar!4v1648681132954!5m2!1ses-419!2sar" width="50%" height="450" style="border:1px solid green;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div class="contactInfo__container">
+            <h3>Contactanos en nuestras sucursales</h3>
+            <div class="tlfYdir__container">
+                Direccion: Av. lorem
+                Telefono: 1234 5678 9999
+                Horarios: 8:00 a 20:30 hs - Lunes a Sabado | 9:00 a 13:00 hs - Domingos y Feriados
+            </div>
+            <div class="tlfYdir__container">
+                Direccion: Av. lorem
+                Telefono: 1234 5678 9999
+                Horarios: 8:00 a 20:30 hs - Lunes a Sabado | 9:00 a 13:00 hs - Domingos y Feriados
+            </div>
+            <div class="tlfYdir__container">
+                Direccion: Av. lorem
+                Telefono: 1234 5678 9999
+                Horarios: 8:00 a 20:30 hs - Lunes a Sabado | 9:00 a 13:00 hs - Domingos y Feriados
+            </div>
+        </div>
+        <form action="#" method="get" enctype="" class="formulario">
+            <fieldset>
+                <legend>Contactanos</legend>
+                <label for="nombre" >Nombre</label>
+                <input type="text" name="userName" id="nombre" required>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="userLastName" id="apellido" required>
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="phone" placeholder="(+54)-011-xxxx-xxxx" id="telefono" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Ingresa tu email" required>
+                <label for="comentarios">Comentarios</label>
+                <textarea name="message" placeholder="Agrega un comentario" cols="20" rows="5"></textarea>
+                <!-- boton enviar y reset -->
+                <button type="reset">Limpiar formulario</button>
+                <button type="submit">Enviar formulario</button>
+            </fieldset>
+        </form>
+    </div>
+
+     <!-- footer -->
+    <footer id="footer" class="container--4">
+        <!-- redes / btn home / btn top / contactame-->
+        <ul class="footer__ul">
+            <li class="footer__li"><a href="../index.html" class="btn__home"><i class="fas fa-home"></i></a></li>
+            <li class="footer__li"><a href="https://www.facebook.com/carniceriacondelivery/" class="link__redes" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li class="footer__li"><a href="https://www.instagram.com/frigorificolacabanacaba/?hl=es" class="link__redes" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li class="footer__li"><a href="mailto:monteverdelex@gmail.com" class="btn-mail"><i class="fas fa-envelope"></i></a></li>
+            <li class="footer__li"><a href="https://api.whatsapp.com/send?phone=+5491126983269" class="footer__links" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="footer__li"><a href="#top" class="btn__top"><i class="fas fa-angle-double-up"></i></a></li>
+        </ul>
+        <div id="copy">
+            <h5>© Copy - Melldy Monteverde</h5>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!-- trabajar los estilos de la seccion formulario -->
+<!-- Agregar las ubicaciones de los locales al formulario -->

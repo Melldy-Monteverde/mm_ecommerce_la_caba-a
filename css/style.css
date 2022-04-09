@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #efefef;
+
+    /* GRID layout */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-template-areas: 
+        "cabecera"
+        "principal"
+        "pie";
+}
+
+/* generalizando enlaces */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    grid-area: cabecera;
+
+    background-color: #630000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header div.header__logo {
+    width: 100%;
+}
+
+header div.header__logo img.logo--desktop {
+    /* margin-top: 15px; */
+    width: 100%;
+    height: 260px;
+    background-color: #fff;
+    object-fit: fill;
+}
+
+header div.header__logo img.logo--mobile {
+    display: none;
+    object-fit: fill;
+}
+
+/* contenedor del navbar completo */
+header nav#header__navBar {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul li.navBar__li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .3s ease-out;
+}
+
+header nav ul li a.navBar__li--links {
+    color: #fff;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+/* efecto sobre los links del nav */
+header nav ul li.navBar__li:hover { 
+    /* color: #630000; */ /* opcion 2 activar color y color de fondo */
+    /* background-color: #efefef; */ 
+    transform: translateY(5px);    
+}
+
+header nav ul li a.navBar__li--links:hover {
+    /* color: #630000; */ /* opcion 2 */
+    color: #efefef;   
+}
+
+#search-block {
+    width: 145px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+header span#searchIcon {
+    display: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #efefef;
+}
+/* btn cart // cambiar por icono // solo visual*/
+header button {
+    background-color: #630000;
+    border: none;
+}
+
+header a.btn-cart {
+    border-radius: 5px;
+    /* margin: 5px; */
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #efefef;
+}
+/* END HEADER */
+
+/* MAIN */
+main {
+    grid-area: principal;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+
+    /* border: 1px solid; */ /* visual */
+    margin: 50px;
+    padding: 15px;
+    background-color: #efefef;
+    border-top: 3px solid #630000;
+    border-bottom: 3px solid #630000;
+    border-radius: 5px;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .5);
+}
+
+/* HOME PAGE */
+section.container--home{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+article.home__img {
+    width: 90%;
+}
+
+article.home__img img.chuleton {
+    width: 100%;
+    border: 4px solid #630000;
+    border: none;
+    border-radius: 5px;
+    /* opacity: .7; */
+}
+
+article.home__reseña {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.118);
+    border-radius: 5px;
+    border: 3px solid #630000;
+    margin: 15px 30px; 
+}
+
+article.home__reseña p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+/* END HOME PAGE */
+
+section { /* revisar esto para que no se pisen los estilos del home */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* GALERIA DE PRODUCTOS */ /* si activamos esta vista, hay quemodificar */
+/* section.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+} */
+
+article.items__gallery {
+    /* border: 1px solid grey; */
+    /* background-color: aqua; */ /* visual */
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly 0;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+section article.items__gallery img {
+    width: 100%;
+    cursor: pointer;
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+} 
+
+section article.items__gallery:hover {
+    border: 1.5px solid #890F0D;
+    /* cursor: pointer; */
+}
+
+section article.items__gallery button.btn-comprar {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #630000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    padding: 7px;
+    margin: 10px auto;
+    width: 100%;
+}
+/* efecto sobre el btn de compra */
+section article.items__gallery button.btn-comprar:hover {
+    background-color: #efefef;
+    border: 2px solid #630000;
+    color: #630000;
+}
+
+/* next page links */
+nav.next__page--nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li.next__page--li {
+    list-style-type: none;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #630000;
+    margin: 10px 3px;
+    padding: 5px;
+}
+
+nav ul li.next__page--li a {
+    color: #fff;
+    border: none;
+    
+}
+/* end main */
+
+/* seccion de contactos */
+div.form__container {
+    margin: 20px;
+    padding: 5px;
+    background-color: #efefef;
+    /* border: none; */
+    border-top: 3px solid #630000;
+    border-bottom: 3px solid #630000;
+    border-radius: 5px;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .5);
+}
+
+/* end seccion de contactos */
+
+/* ASIDE */
+/* aside {
+    grid-area: banner;
+    background-color: lightblue;
+} */
+
+/* FOOTER */
+footer {
+    grid-area: pie;
+
+    border-top: 2px solid #890F0D;
+    background-color: #D3D6DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    /* position: relative;
+    bottom: 0; */
+}
+
+footer ul.footer__ul li.footer__li {
+    display: inline-block;
+    list-style-type: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background-color: #630000;
+    padding: 10px;
+    margin: auto 5px;
+    cursor: pointer;
+    transition: transform .3s ease-out;
+}
+
+footer ul.footer__ul li.footer__li:hover {
+    /* background-color: #efefef; */
+    transform: translateY(8px);
+}
+
+footer i.fas, i.fab {
+    width: 100%;
+    color: #efefef;
+}
+
+footer #copy {
+    margin: 10px auto;
+}
+/* footer a{
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #630000;
+    color: #fff;
+}
+
+footer a:hover {
+    border: 1px solid #630000;
+    color: #630000;
+    background-color: #efefef;
+} */
+
+/* Media QUERIES */
+
+@media screen and (max-width: 375px) {
+    
+    header {
+        justify-content: space-between;
+        padding: 5px;
+    }
+    
+    header div.header__logo img.logo--desktop {
+        display: none;
+    }
+    
+    header div.header__logo {
+        width: auto;
+    }
+
+    header div.header__logo img.logo--mobile {
+        display: inherit;
+        width: 100px;
+    }
+
+    header nav ul {
+        width: 75%;
+    }
+
+    header nav ul li.navBar__li {
+        margin-bottom: 5px;
+        border: 1px solid #efefef;
+        border-radius: 5px;
+    }
+
+    header nav ul li.navBar__li:hover {
+        transform: translate(0)
+    }
+
+    #search-block {
+        display: none;
+    }
+
+    span#searchIcon {
+        display: inline-block;
+    }
+
+    main {
+        margin: 10px 5px;
+    }
+
+    footer ul.footer__ul li.footer__li:hover {
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header nav ul li.navBar__li:hover {
+        transform: inherit;
+    }
+}
+
+    /* TRABAJAR EN EL MENU RESPONSIVE - MENU HAMBURGUESA */
