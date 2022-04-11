@@ -331,23 +331,57 @@ footer i.fas, i.fab {
 
 footer #copy {
     margin: 10px auto;
-}
-/* footer a{
-    border-radius: 5px;
-    margin: 5px;
-    padding: 10px;
-    background-color: #630000;
-    color: #fff;
+    text-transform: capitalize;
 }
 
-footer a:hover {
-    border: 1px solid #630000;
-    color: #630000;
-    background-color: #efefef;
-} */
+footer div.footer__animacion {
+    width: 280px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 20px;
+
+    display: flex;
+    justify-content: center;
+   
+    text-transform: capitalize;
+    background-color: #630000;
+    color: #efefef;
+
+    overflow: hidden;
+}
+
+footer div.footer__animacion ul.ul--transition {
+    list-style-type: none;
+    padding-left: 10px;
+    animation: cambio 6s infinite;
+
+}
+
+footer ul, p {
+    margin: 0;
+}
+
+/* animacion de footer */
+@keyframes cambio {
+
+    0% { margin-top: 0;}
+    20% { margin-top: 0;}
+
+    25% { margin-top: -20px;}
+    50% { margin-top: -20px;}
+
+    55% { margin-top: -40px;}
+    80% { margin-top: -40px;}
+
+    85% { margin-top: -20px;}
+    95% { margin-top: -20px;}
+
+    100% { margin-top: 0;}
+}
 
 /* Media QUERIES */
-
 @media screen and (max-width: 375px) {
     
     header {
@@ -405,5 +439,4 @@ footer a:hover {
         transform: inherit;
     }
 }
-
-    /* TRABAJAR EN EL MENU RESPONSIVE - MENU HAMBURGUESA */
+    /* TRABAJAR EN EL MENU RESPONSIVE - MENU DESPLEGABLE */
