@@ -106,17 +106,17 @@ header nav ul li a.navBar__li--links:hover {
     border-radius: 5px;
 }
 
-header span#searchIcon {
-    display: none;
+header button {
+    background-color: #630000;
+    border: none;
+}
+
+header #searchIcon {
     border-radius: 5px;
     padding: 5px;
     color: #fff;
     border: 1px solid #efefef;
-}
-/* btn cart // cambiar por icono // solo visual*/
-header button {
-    background-color: #630000;
-    border: none;
+    cursor: pointer;
 }
 
 header a.btn-cart {
