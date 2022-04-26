@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none;
+  font-weight: bold; }
+
+body::-webkit-scrollbar {
+  width: 10px; }
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px; }
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #630000, #c96262);
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0 3px 13px 1px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 13px 1px; }
+
+body {
+  background-color: #efefef;
+  /* GRID layout */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2fr auto;
+  grid-template-areas: "cabecera" "principal" "pie";
+  height: 100vh; }

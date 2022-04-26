@@ -1,0 +1,16 @@
+@import 'general'; 
+
+body {
+    background-color: #efefef;
+
+    /* GRID layout */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-template-areas: 
+        "cabecera"
+        "principal"
+        "pie";
+    height: 100vh;
+}
+
