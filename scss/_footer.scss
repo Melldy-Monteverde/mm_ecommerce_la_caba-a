@@ -1,0 +1,100 @@
+@import 'mixins';
+
+// VARIABLES
+$primaryColorBG: #efefef;
+$secondaryColorBG: #630000;
+$primaryFontColor: #fff;
+$secondaryFontColor: #630000;
+$primaryBtnColor: #630000;
+$secondaryBtnColor: #fff;
+// ###
+
+footer {
+    grid-area: pie;
+
+    border-top: 2px solid $secondaryColorBG;
+    background-color: #D3D6DB;
+    @include flexRowCenter;
+    flex-flow: column wrap;
+
+    width: 100%;
+    padding: 10px;
+
+    ul.footer__ul {
+        padding: 0;
+
+        li.footer__li {
+            display: inline-block;
+            list-style-type: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            background-color: $secondaryColorBG;
+            padding: 10px;
+            margin: auto 5px;
+            cursor: pointer;
+            transition: transform .3s ease-out;
+
+            &:hover {
+                transform: translateY(8px);
+            }
+        }
+    }
+
+    i.fas, i.fab {
+        width: 100%;
+        color: $secondaryBtnColor;
+    }
+  
+    #copy {
+        margin: 10px auto;
+        text-transform: capitalize;
+    }
+
+    div.footer__animacion {
+        width: 280px;
+        height: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        line-height: 20px;
+    
+        display: flex;
+        justify-content: center;
+       
+        text-transform: capitalize;
+        background-color: $secondaryColorBG;
+        color: $primaryFontColor;
+    
+        overflow: hidden;
+
+        ul.ul--transition {
+            list-style-type: none;
+            padding-left: 10px;
+            animation: cambio 6s infinite;
+        
+        }
+        
+        ul, p.msj_animado {
+            margin: 0;
+        }
+    }
+    
+    // animacion de footer 
+    @keyframes cambio {
+
+        0% { margin-top: 0;}
+        20% { margin-top: 0;}
+
+        25% { margin-top: -20px;}
+        50% { margin-top: -20px;}
+
+        55% { margin-top: -40px;}
+        80% { margin-top: -40px;}
+
+        85% { margin-top: -20px;}
+        95% { margin-top: -20px;}
+
+        100% { margin-top: 0;}
+    }
+}

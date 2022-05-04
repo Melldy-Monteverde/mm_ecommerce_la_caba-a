@@ -1,16 +1,235 @@
-@import 'general'; 
+// PARTIALS
+@import 'general';
+@import 'mixins';
+@import 'maps';
+@import 'header';
+@import 'footer';
+@import 'mediaQ';
+// ###
+
+// VARIABLES
+$primaryColorBG: #efefef;
+$secondaryColorBG: #630000;
+$primaryFontColor: #fff;
+$secondaryFontColor: #630000;
+$primaryBtnColor: #630000;
+$secondaryBtnColor: #fff;
+// ###
 
 body {
-    background-color: #efefef;
-
-    /* GRID layout */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 2fr auto;
-    grid-template-areas: 
-        "cabecera"
-        "principal"
-        "pie";
-    height: 100vh;
+    background-color: $primaryColorBG;
+    @include grilla;
 }
 
+main {
+    grid-area: principal;
+
+    @include flexColumnCenter;
+    flex-wrap: wrap;
+
+    min-height: calc(100vh - auto); // esto corrige el movimiento del footer
+    margin: 50px;
+    padding: 15px;
+    background-color: map-get($estilos, color2);
+    border-top: 3px solid $secondaryColorBG;
+    border-bottom: 3px solid $secondaryColorBG;
+    border-radius: 5px;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .5);
+
+    // HOME PAGE
+    section.container--home{
+        @include flexRowCenter;
+
+        article.home__img {
+            width: 100%;
+
+            img.chuleton {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+
+        article.home__reseña {
+            width: 90%;
+            @include flexRowCenter;
+            flex-wrap: wrap;
+            background-color: rgba(51, 51, 51, 0.118);
+            border-radius: 5px;
+            border: 3px solid $secondaryColorBG;
+            margin: 15px 30px; 
+            
+            p {
+                padding: 5px;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    } // ###
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        article.items__gallery {
+            @include cardSize(300px, auto);
+            margin: 10px;
+            padding: 0px;
+            border-radius: 5px;
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+            @include flexColumnCenter;
+            text-transform: capitalize;
+
+            img {
+                width: 100%;
+                cursor: pointer;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            
+            &:hover {
+                transform: scale(.9, .9);
+                transition: all ease-in-out .5s;
+            }
+
+            h5 {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            p {
+                text-align: center;
+                margin: 5px auto;
+            }
+
+            button.btn-comprar {
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: $primaryBtnColor;
+                color: $primaryFontColor;
+                font-weight: bold;
+                font-size: 1rem;
+                border: none;
+                padding: 5px;
+                margin: 5px auto 10px;
+                width: 50%;
+
+                &:hover {
+                    background-color: $primaryColorBG;
+                    border: 1px solid $primaryBtnColor;
+                    color: $primaryBtnColor;
+                }
+            }
+        }
+    }
+
+    // paginacion
+    nav.paginas {
+        margin-top: 15px;
+
+        ul.pagination {
+            li.page-item a.page-link {
+                color: $primaryFontColor;
+                background-color: $primaryBtnColor;
+                transition: transform .2s ease-out;
+
+                &:hover {
+                    background-color: $primaryColorBG;
+                    color: $secondaryColorBG;
+                    border: 1px solid $secondaryColorBG;
+                    transform: translateY(-5px);
+                    
+                }
+            }
+        } 
+    }
+    
+    // contactos
+
+    // mapas
+    div.form__container {
+        div.row {
+            div.mapas {
+                iframe.mapa__locales {
+                    border: 3px solid $secondaryColorBG;
+                    width: auto;
+                    height: 330px;
+                    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            div.info {
+                div.contactInfo__container {
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    
+                    border-top: 3px solid $secondaryColorBG;
+                    border-bottom: 3px solid $secondaryColorBG;
+                    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+                    margin-bottom: 10px;
+
+                    p.direcciones {
+                        margin: 3px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            div.formulario {
+                form.formulario {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    padding: 10px;
+                    background-color: $secondaryColorBG;
+                    width: 100%;
+                    
+                    input[type=text], input[type=email], textarea {
+                        border: none;
+                        border-radius: 5px;
+                        padding: 3px;
+                    }
+
+                    input.btn-primary {
+                        background-color: $primaryColorBG;
+                        color: $secondaryFontColor;
+                        border-color: $primaryBtnColor;
+
+                        &:hover {
+                            color: $primaryFontColor;
+                            border: 1px solid $primaryColorBG;
+                        }
+                    }
+
+                    input[type=submit] {
+                        @extend input.btn-primary;
+                        width: 100px;
+                        background-color: $primaryColorBG;
+                        color: $secondaryFontColor;
+
+                        &:hover {
+                            background-color: #51b04e;
+                        }
+                    }
+
+                    input[type=reset] {
+                        @extend input.btn-primary;
+                        width: 100px;
+                        background-color: $primaryColorBG;
+                        color: $secondaryFontColor;
+
+                        &:hover {
+                            background-color: #949494;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@mixin grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-template-areas: 
+        "cabecera"
+        "principal"
+        "pie";
+    height: 100vh;
+}
+
+@mixin resetDefault {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@mixin flexRowCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin cardSize($width, $height) {
+    width: $width;
+    height: $height;
+}
+

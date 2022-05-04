@@ -1,0 +1,108 @@
+$primaryBtnColor: #630000;
+$secondaryBtnColor: #fff;
+
+@media screen and (max-width: 475px) {
+
+    // header
+    header {
+
+        div.header__logo {
+
+            img.logo--desktop {
+                display: none;
+            }
+        }
+
+        nav.navbar {
+            
+            img.logo--navbar {
+                display: inline-block;
+                width: auto;
+            }
+            
+            button.navbar-toggler {
+                border-color: $secondaryBtnColor;
+                
+                span.fa-bars {
+                    color: $secondaryBtnColor;
+                }
+            }
+            
+            input.searchBlock { // no aumentar porque se esconde el btn de menu en pantallas menores a 350px aprox
+                width: 90%;
+            }
+        }
+    }
+    
+    // main
+    main {
+        margin: 15px;
+        
+        article.items__gallery {
+            width: 215px;
+            
+            &:hover {
+                transform: none;
+                transition: none;
+            }
+        }
+        
+        nav ul li.page-item a.page-link:hover {
+            transform: none;
+        }
+
+        // paginacion
+        nav ul li.page-item a.page-link:hover {
+            transform: none;
+        }
+
+        // contactos
+        // mapas
+        div.mapas iframe.mapa__locales {
+            width: 90%;
+            height: 250px;
+            margin: auto 10px;
+        }
+
+        // horarios
+        div.contactInfo__container {
+            margin: 10px;
+            width: 90%;
+        }
+
+        form.formulario {
+            margin: auto 10px;
+            width: 90%;
+        }
+        
+        input[type=text], input[type=email], textarea {
+            border: none;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        
+        input[type=submit], input[type=reset] {
+            width: 90px;
+        }
+    }
+
+    // footer
+    footer ul.footer__ul li.footer__li:hover {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    // header
+    header { 
+        div.header__logo img.logo--desktop {
+            display: none;
+        }
+        
+        nav.navbar div.container-fluid a.navbar-brand img.logo--navbar {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}
