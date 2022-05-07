@@ -111,6 +111,8 @@ footer {
   footer i.fas, footer i.fab {
     width: 100%;
     color: #fff; }
+    footer i.fas a, footer i.fab a {
+      width: 100%; }
   footer #copy {
     margin: 10px auto;
     text-transform: capitalize; }
@@ -232,7 +234,7 @@ main {
     justify-content: center;
     align-items: center; }
     main section.container--home article.home__img {
-      width: 100%; }
+      width: 95%; }
       main section.container--home article.home__img img.chuleton {
         width: 100%;
         border-radius: 5px; }
@@ -281,6 +283,9 @@ main {
         margin-top: 10px; }
       main section article.items__gallery p {
         text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
         margin: 5px auto; }
       main section article.items__gallery button.btn-comprar {
         cursor: pointer;
@@ -311,7 +316,7 @@ main {
   main div.form__container div.row div.mapas iframe.mapa__locales {
     border: 3px solid #630000;
     width: auto;
-    height: 330px;
+    height: 300px;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5); }
   main div.form__container div.row div.info div.contactInfo__container {
     width: auto;

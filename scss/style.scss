@@ -41,7 +41,7 @@ main {
         @include flexRowCenter;
 
         article.home__img {
-            width: 100%;
+            width: 95%;
 
             img.chuleton {
                 width: 100%;
@@ -100,6 +100,9 @@ main {
 
             p {
                 text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 18px;
                 margin: 5px auto;
             }
 
@@ -154,7 +157,7 @@ main {
                 iframe.mapa__locales {
                     border: 3px solid $secondaryColorBG;
                     width: auto;
-                    height: 330px;
+                    height: 300px;
                     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
                 }
             }

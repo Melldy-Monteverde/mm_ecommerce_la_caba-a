@@ -44,6 +44,10 @@ footer {
     i.fas, i.fab {
         width: 100%;
         color: $secondaryBtnColor;
+
+        a {
+            width: 100%;
+        }
     }
   
     #copy {
