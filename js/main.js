@@ -7,14 +7,16 @@ let mail
 
 debugger
 function saludar() {
-    username = prompt("Ingresa tu nombre:")
+    mail = prompt("Ingresa tu direccion de email:")
+    phone = parseInt(prompt("Ingresa tu numero de contacto:"))
     
-    if (username == null) {
-        alert("no ingresaste tu nombre")
+    if ((mail == null) || (phone == null)){
+        alert("no ingresaste tus datos de contacto y no podremos enviarte nuestras ofertas")
+        alert("podras seguir navegando por nuestro sitio igualmente")
     } else {
-        mail = prompt("ingresa tu mail:")
-        phone = parseInt(prompt("ingresa tu cel:"))
+        username = prompt("Ingresa tu nombre de usuario:")
         alert("hola " + username + " gracias por dejar tu info de contacto")
+        alert("revisa nuestros productos y ve preparandote para el asado!")
     }
 }
 
