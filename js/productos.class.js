@@ -1,18 +1,52 @@
-const iva = 10.5
-
+// constructor de objetos para lista de productos
 class Producto {
-	constructor (id, nombre, precio) {
-		this.id = id
-		this.nombre = nombre.toUpperCase()
-		this.precio = parseFloat(precio)
-	}
-	
-	sumaIva() {
-		this.precio = this.precio + iva
-	}
+    constructor(nombre, precio, cantidadPeso) {
+        this.nombre = nombre
+        this.precio = parseFloat(precio)
+        this.cantidadPeso = cantidadPeso
+    }
 }
 
-productos.push(new Producto("asado", "1.149,90"))
-productos.push(new Producto("bife ancho", "1.049,90"))
-productos.push(new Producto("bife angosto", "1.099,90"))
+// listado de prodcutos
+const productos = []
 
+// funcion para cargar el array de productos, no el carrito
+function poblarProductos() {
+    productos.push(new Producto("asado", 99.90, 1))
+    productos.push(new Producto("vacio", 119.90, 1))
+    productos.push(new Producto("pechito", 79.90, 1))
+    productos.push(new Producto("pollo", 79.90, 1))
+    productos.push(new Producto("morcilla", 19.90, 1))
+    productos.push(new Producto("milanesa de pollo", 89.90, 1))
+    productos.push(new Producto("milanesa de carne", 89.90, 1))
+    productos.push(new Producto("bondiola", 89.90, 1))
+
+    console.table(productos)
+}
+
+poblarProductos()
+
+
+//buscar producto en la pagina()
+function buscarProducto() {
+    let aBuscar = prompt("que producto buscas?").toLowerCase()
+        if (aBuscar != undefined && aBuscar != null && aBuscar.trim != "") {
+            
+            let resultado = productos.find(p => p.nombre.toLowerCase() === aBuscar.toLowerCase())
+            console.table(resultado)
+        } else {
+            alert("No existe ese producto en nuestra tienda")
+        }
+}
+
+// filtrar por producto en la pagina
+function filtrarProducto() {
+    let prod = prompt("filtrar por parte del nombre o nombre:")
+        if (prod != undefined) {
+            
+            let filtrado = carrito.filter(f => f.nombre.includes(prod.toLowerCase()))
+            console.table(filtrado)
+        } else {
+        alert("producto inexistente")
+    }
+}

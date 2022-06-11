@@ -8,6 +8,12 @@ function listarCarro() {
     console.table(carrito)
 }
 
+// listar productos de tienda
+function listarProductos() {
+    console.clear()
+    console.table(productos)
+}
+
 // agregar al carrito y llamado a listar para ver tabla en consola | asociar con el boton comprar de cada producto
 function agregaProducto() {
     let nuevoProducto = prompt("ingresa un producto").toLowerCase()
@@ -31,7 +37,7 @@ function vaciarCarrito() {
 
     if(vaciar != undefined && vaciar != null && vaciar != "") {
         carrito = []
-        alert("el esta carrito vacio")
+        alert("el carrito esta vacio")
     }
 }
 
@@ -42,4 +48,11 @@ function quitarProducto() {
         carrito.splice(index, 1)
         alert(`${eliminarProducto} se elimino del carrito`)
         listarCarro()
+}
+
+// calcular valor del carrito
+function calcularMontoCarrito() {
+    let total = productos.reduce( (valorPrevio, valorActual) => valorPrevio + valorActual.precio, 0)
+    console.table(total)
+    alert("el valor del carrito es")
 }
