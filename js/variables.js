@@ -1,47 +1,45 @@
-const ivaCarnes = 1.105
-const ivaOtros = 1.21
+// declaro array vacio y moneda (usare luego)
+let carrito = []
+const moneda = "$"
 
-const productos = []
-const items = ["asado", "vaccio", "supremas", "chorizo", "morcilla", "milanesa de pollo", "bondiola", "pechito", "chinchulin"]
-const cart = []
-
-// esto aplicara para el DOM cuando se agregue un producto
-function agregaAlCarrito() {
+// listar carrito | crear un boton que muestre el carrito
+function listarCarro() {
     console.clear()
-    // debugger
-    let nuevoProducto = prompt("ingresa un producto al carrito:")
-        productos.push(agregaAlCarrito);
+    console.table(carrito)
+}
+
+// agregar al carrito y llamado a listar para ver tabla en consola | asociar con el boton comprar de cada producto
+function agregaProducto() {
+    let nuevoProducto = prompt("ingresa un producto").toLowerCase()
+
+    if (nuevoProducto != undefined && nuevoProducto != null && nuevoProducto.trim() != "") {
+        carrito.push(nuevoProducto)
         alert(`${nuevoProducto} agregado al carrito`)
+        listarCarro()
+    }
 }
 
-agregaAlCarrito()
+// llamo al afuncion 3 veces para simular una carga de productos y listar todos los prouctos del carrito(esto es solo para ver funcionalidad)
+agregaProducto()
+agregaProducto()
+agregaProducto()
 
-// buscar producto por nombre, esto será para la barra de busqueda
-function buscarProducto() {
-    debugger
-    let prod = prompt("qué producto quieres buscar?:")
-        if (prod !== "") {
-            let resultadoBusqueda = productos.find( p => p.nombre === prod.toLowerCase())
-            alert(`si hay ${resultadoBusqueda}`)
-        } else {
-            alert(`no hay ${resultadoBusqueda}`)
-        }
+// borrar carrito, con validacion | crear boton de vaciar carrito
+function vaciarCarrito() {
+    // Limpiamos los productos guardados en el carrito
+    let vaciar = confirm("quiere vaciar el carrito de compras?")
 
+    if(vaciar != undefined && vaciar != null && vaciar != "") {
+        carrito = []
+        alert("el esta carrito vacio")
+    }
 }
 
-// quitar producto del carrito
-function eliminarProducto() {
-    console.log()
-    let producto = promt("cual item quiere eliminar del carrito?")
-    let indice = cart
+// quitar 1 producto del carrito | crear boton de eliminar producto
+function quitarProducto() {
+    let eliminarProducto = prompt("cual producto quiere sacar del carrito?").toLowerCase()
+    let index = carrito.indexOf(eliminarProducto)
+        carrito.splice(index, 1)
+        alert(`${eliminarProducto} se elimino del carrito`)
+        listarCarro()
 }
-
-// calcular valor del carrito
-function valorCarrito() {
-    debugger
-    alert("el total del pedido es:")
-    let total = cart.reduce( (acc, c) => acc + c.price, 0)
-        alert(`toal ${total}`)
-}
-
-// 
