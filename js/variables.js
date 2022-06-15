@@ -27,8 +27,7 @@ function agregaProducto() {
 
 // llamo al afuncion 3 veces para simular una carga de productos y listar todos los prouctos del carrito(esto es solo para ver funcionalidad)
 agregaProducto()
-agregaProducto()
-agregaProducto()
+
 
 // borrar carrito, con validacion | crear boton de vaciar carrito
 function vaciarCarrito() {
