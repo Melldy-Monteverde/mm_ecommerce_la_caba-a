@@ -193,12 +193,20 @@ main {
                     background-color: $secondaryColorBG;
                     width: 100%;
                     
-                    input[type=text], input[type=email], textarea {
+                    input[type=text], input[type=email], input[type=tel], textarea {
                         border: none;
                         border-radius: 5px;
-                        padding: 3px;
+                        padding: 5px;
+                    }   
+                    
+                    input.form-correcto, textarea.form-correcto {
+                        border: 3px solid #29bb41;
                     }
-
+                    
+                    input.form-incorrecto, textarea.form-incorrecto {
+                        border: 3px solid #ff0000;
+                    }
+                    
                     input.btn-primary {
                         background-color: $primaryColorBG;
                         color: $secondaryFontColor;
@@ -230,6 +238,12 @@ main {
                         &:hover {
                             background-color: #949494;
                         }
+                    }
+
+                    
+                    p#msjEnviado {
+                        color: $primaryFontColor;
+                        @include flexColumnCenter;
                     }
                 }
             }

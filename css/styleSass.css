@@ -339,10 +339,14 @@ main {
     padding: 10px;
     background-color: #630000;
     width: 100%; }
-    main div.form__container div.row div.formulario form.formulario input[type=text], main div.form__container div.row div.formulario form.formulario input[type=email], main div.form__container div.row div.formulario form.formulario textarea {
+    main div.form__container div.row div.formulario form.formulario input[type=text], main div.form__container div.row div.formulario form.formulario input[type=email], main div.form__container div.row div.formulario form.formulario input[type=tel], main div.form__container div.row div.formulario form.formulario textarea {
       border: none;
       border-radius: 5px;
-      padding: 3px; }
+      padding: 5px; }
+    main div.form__container div.row div.formulario form.formulario input.form-correcto, main div.form__container div.row div.formulario form.formulario textarea.form-correcto {
+      border: 3px solid #29bb41; }
+    main div.form__container div.row div.formulario form.formulario input.form-incorrecto, main div.form__container div.row div.formulario form.formulario textarea.form-incorrecto {
+      border: 3px solid #ff0000; }
     main div.form__container div.row div.formulario form.formulario input.btn-primary, main div.form__container div.row div.formulario form.formulario input[type=submit], main div.form__container div.row div.formulario form.formulario input[type=reset] {
       background-color: #efefef;
       color: #630000;
@@ -362,3 +366,9 @@ main {
       color: #630000; }
       main div.form__container div.row div.formulario form.formulario input[type=reset]:hover {
         background-color: #949494; }
+    main div.form__container div.row div.formulario form.formulario p#msjEnviado {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }

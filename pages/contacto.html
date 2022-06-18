@@ -91,20 +91,21 @@
 
             <!-- Formulario -->
                 <div class="formulario col-md-auto col-lg-auto">
-                    <form action="#" method="get" enctype="" class="rounded formulario" id="form" required>
+                    <form action="#" method="get" enctype="" class="rounded formulario" id="form" required autocomplete="off">
                         <label for="userName"></label>
-                        <input type="text" name="nombre" id="userName" class="input-form" placeholder="Nombre*" required>
-                        <label for="UserLastName"></label>
-                        <input type="text" name="apellido" id="userLastName" class="input-form" placeholder="Apellido*" required>
+                        <input type="text" name="nombre" id="user_Name" class="input-form" placeholder="Nombre *" required>
+                        <label for="userTel"></label>
+                        <input type="tel" name="telefono" id="user_Tel" class="input-form" placeholder="Telefono *" required>
                         <label for="userMail"></label>
-                        <input type="email" name="email" id="userEmail" class="input-form" placeholder="E-mail*" required>
-                        <label for="comentarios"></label>
-                        <textarea name="" id="comentarios" class="input-form" cols="" rows="" placeholder="Dejanos tu comentario"></textarea>
+                        <input type="email" name="email" id="user_Email" class="input-form" placeholder="E-mail *" required>
+                        <label for="user_Coment"></label>
+                        <textarea name="comentarios" id="user_Coment" class="input-form" placeholder="Dejanos tu comentario *" required></textarea>
                         <!-- boton enviar y reset -->
-                        <div class="d-grid gap-2 d-md-block">
-                            <input id="btnEnviar" class="btn btn-primary input-form" type="submit" value="Enviar"> 
+                        <div class="d-grid gap-2 d-md-block botoneE">
+                            <input id="btnEnviar" class="btn btn-primary input-form" type="submit" value="Enviar">
                             <input id="btnBorrar" class="btn btn-primary input-form" type="reset" value="Borrar">
                         </div>    
+                        <p id="msjEnviado" class="msjEnviado"></p>
                     </form>
                 </div>
             </div>
