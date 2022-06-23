@@ -81,6 +81,65 @@ header {
       margin: auto 3px; }
       header nav.navbar form.d-flex button.btn-outline-success i.fas {
         color: #fff; }
+      header nav.navbar form.d-flex button.btn-outline-success span.contador {
+        margin-left: 2px;
+        color: #efefef; }
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden; }
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5; }
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  border: 1px solid #e14c41;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all 0.5s; }
+
+.modal-active .modal-carrito {
+  margin-top: 0; }
+
+.modal-carrito h3 {
+  color: #e14c41;
+  padding-bottom: 5px; }
+
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #e14c41;
+  border: none;
+  background-color: white; }
+
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer; }
+
+.modal-carrito #carritoCerrar:focus {
+  outline: none; }
+
+.modal-carrito .precioProducto {
+  padding-top: 10px; }
+
+.card .card-image .card-title {
+  color: #e14c41;
+  position: unset; }
 
 footer {
   grid-area: pie;
@@ -275,9 +334,6 @@ main {
         cursor: pointer;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px; }
-      main section article.items__gallery:hover {
-        transform: scale(0.9, 0.9);
-        transition: all ease-in-out .5s; }
       main section article.items__gallery h5 {
         text-align: center;
         margin-top: 10px; }
@@ -287,7 +343,8 @@ main {
         font-weight: bold;
         font-size: 18px;
         margin: 5px auto; }
-      main section article.items__gallery button.btn-comprar {
+      main section article.items__gallery button.btn-agregar,
+      main section article.items__gallery button.btn-borrar {
         cursor: pointer;
         border-radius: 5px;
         background-color: #630000;
@@ -298,7 +355,8 @@ main {
         padding: 5px;
         margin: 5px auto 10px;
         width: 50%; }
-        main section article.items__gallery button.btn-comprar:hover {
+        main section article.items__gallery button.btn-agregar:hover,
+        main section article.items__gallery button.btn-borrar:hover {
           background-color: #efefef;
           border: 1px solid #630000;
           color: #630000; }
@@ -339,13 +397,18 @@ main {
     padding: 10px;
     background-color: #630000;
     width: 100%; }
-    main div.form__container div.row div.formulario form.formulario input[type=text], main div.form__container div.row div.formulario form.formulario input[type=email], main div.form__container div.row div.formulario form.formulario input[type=tel], main div.form__container div.row div.formulario form.formulario textarea {
+    main div.form__container div.row div.formulario form.formulario input[type=text],
+    main div.form__container div.row div.formulario form.formulario input[type=email],
+    main div.form__container div.row div.formulario form.formulario input[type=tel],
+    main div.form__container div.row div.formulario form.formulario textarea {
       border: none;
       border-radius: 5px;
       padding: 5px; }
-    main div.form__container div.row div.formulario form.formulario input.form-correcto, main div.form__container div.row div.formulario form.formulario textarea.form-correcto {
+    main div.form__container div.row div.formulario form.formulario input.form-correcto,
+    main div.form__container div.row div.formulario form.formulario textarea.form-correcto {
       border: 3px solid #29bb41; }
-    main div.form__container div.row div.formulario form.formulario input.form-incorrecto, main div.form__container div.row div.formulario form.formulario textarea.form-incorrecto {
+    main div.form__container div.row div.formulario form.formulario input.form-incorrecto,
+    main div.form__container div.row div.formulario form.formulario textarea.form-incorrecto {
       border: 3px solid #ff0000; }
     main div.form__container div.row div.formulario form.formulario input.btn-primary, main div.form__container div.row div.formulario form.formulario input[type=submit], main div.form__container div.row div.formulario form.formulario input[type=reset] {
       background-color: #efefef;

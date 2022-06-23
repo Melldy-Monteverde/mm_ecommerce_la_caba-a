@@ -77,16 +77,33 @@ function enviarForm () {
     // se muestra cuando el formulario se envia
     form.lastElementChild.innerText = "Enviado con exito!";
 
-    // borra el msj de enviado despues de 2 segundos
+    borrarPostEnvio();
+}
+
+function borrarPostEnvio() {
+    // borra el msj de exito y el color de los campos despues de enviar el formulairo
     setTimeout(() => {
-        document.getElementById('msjEnviado').remove();
+        document.getElementById("msjEnviado").remove();
     }, 3000);
-}   
+
+    setTimeout(() => {
+        document.getElementById("user_Name").classList.remove("form-correcto");
+    }, 3000);
+
+    setTimeout(() => {
+        document.getElementById("user_Tel").classList.remove("form-correcto");
+    }, 3000);
+    
+    setTimeout(() => {
+        document.getElementById("user_Email").classList.remove("form-correcto");
+    }, 3000);
+}
 
 // avisos en botones enviar y borrar
 btnEnviar.addEventListener('mousemove', () => {
     btnEnviar.title = "Haga click para enviar el formulario.";
 })
+
 
 bntBorrar.addEventListener('mousemove', () => {
     bntBorrar.title = 'Haga click para borrar el formulario.';
