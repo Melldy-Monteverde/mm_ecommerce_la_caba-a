@@ -210,7 +210,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 2fr auto;
-  grid-template-areas: "cabecera" "principal" "pie";
+  grid-template-areas: "cabecera" "principal" "pie";
   height: 100vh; }
 
 main {
