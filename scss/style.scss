@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'maps';
 @import 'header';
+@import 'modal';
 @import 'footer';
 @import 'mediaQ';
 // ###
@@ -37,7 +38,7 @@ main {
     box-shadow: 10px 10px 7px rgba(0, 0, 0, .5);
 
     // HOME PAGE
-    section.container--home{
+    section.container--home {
         @include flexRowCenter;
 
         article.home__img {
@@ -56,22 +57,24 @@ main {
             background-color: rgba(51, 51, 51, 0.118);
             border-radius: 5px;
             border: 3px solid $secondaryColorBG;
-            margin: 15px 30px; 
-            
+            margin: 15px 30px;
+
             p {
                 padding: 5px;
                 font-size: 20px;
                 text-align: center;
             }
         }
-    } // ###
+    }
+
+    // ###
 
     section {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        
+
         article.items__gallery {
             @include cardSize(300px, auto);
             margin: 10px;
@@ -87,11 +90,11 @@ main {
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
             }
-            
-            &:hover {
-                transform: scale(.9, .9);
-                transition: all ease-in-out .5s;
-            }
+
+            // &:hover {
+            //     transform: scale(.9, .9);
+            //     transition: all ease-in-out .5s;
+            // }
 
             h5 {
                 text-align: center;
@@ -106,7 +109,8 @@ main {
                 margin: 5px auto;
             }
 
-            button.btn-comprar {
+            button.btn-agregar,
+            button.btn-borrar {
                 cursor: pointer;
                 border-radius: 5px;
                 background-color: $primaryBtnColor;
@@ -142,12 +146,12 @@ main {
                     color: $secondaryColorBG;
                     border: 1px solid $secondaryColorBG;
                     transform: translateY(-5px);
-                    
+
                 }
             }
-        } 
+        }
     }
-    
+
     // contactos
 
     // mapas
@@ -169,7 +173,7 @@ main {
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    
+
                     border-top: 3px solid $secondaryColorBG;
                     border-bottom: 3px solid $secondaryColorBG;
                     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
@@ -192,21 +196,26 @@ main {
                     padding: 10px;
                     background-color: $secondaryColorBG;
                     width: 100%;
-                    
-                    input[type=text], input[type=email], input[type=tel], textarea {
+
+                    input[type=text],
+                    input[type=email],
+                    input[type=tel],
+                    textarea {
                         border: none;
                         border-radius: 5px;
                         padding: 5px;
-                    }   
-                    
-                    input.form-correcto, textarea.form-correcto {
+                    }
+
+                    input.form-correcto,
+                    textarea.form-correcto {
                         border: 3px solid #29bb41;
                     }
-                    
-                    input.form-incorrecto, textarea.form-incorrecto {
+
+                    input.form-incorrecto,
+                    textarea.form-incorrecto {
                         border: 3px solid #ff0000;
                     }
-                    
+
                     input.btn-primary {
                         background-color: $primaryColorBG;
                         color: $secondaryFontColor;
@@ -240,7 +249,7 @@ main {
                         }
                     }
 
-                    
+
                     p#msjEnviado {
                         color: $primaryFontColor;
                         @include flexColumnCenter;
