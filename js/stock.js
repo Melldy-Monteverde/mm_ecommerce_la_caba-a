@@ -43,6 +43,23 @@ let stockProductosAves = [
 let stockProductosCerdo = [
     {id:28, nombre: 'bondiola', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/bondiola.jpg', alt: 'bondiola'},
     {id:29, nombre: 'carre deshuesado', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/carre-deshuesado.jpg', alt: 'carre deshuesado'},
-    {id:30, nombre: 'pollo entero', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_aves/pollo-entero.jpg', alt: 'pollo entero'},
-    {id:31, nombre: 'supremas', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_aves/supremas.jpg', alt: 'supremas'}
+    {id:30, nombre: 'chuleta de pernil', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/chuleta-pernil.jpg', alt: 'chuleta de pernil'},
+    {id:32, nombre: 'chuleta', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/chuleta.jpg', alt: 'chuleta'},
+    {id:33, nombre: 'costillitas de cerdo', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/costillita-cerdo.jpg', alt: 'costillitas de cerdo'},
+    {id:34, nombre: 'matambrito', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/matambrito.jpg', alt: 'matambrito'},
+    {id:35, nombre: 'milanesa de cerdo', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/milanesas-de-cerdo.jpg', alt: 'milanesa de cerdo'},
+    {id:36, nombre: 'pechito', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_cerdo/pechito.jpg', alt: 'pechito'}
+]
+
+// embutidos
+let stockProductosEmbutidos = [
+    {id:37, nombre: 'chinchulin', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/chinchulin.jpg', alt: 'chinchulin'},
+    {id:38, nombre: 'chorizo', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/chorizo.jpg', alt: 'chorizo'},
+    {id:39, nombre: 'higado', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/higado.jpg', alt: 'higado'},
+    {id:40, nombre: 'lengua', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/lengua.jpg', alt: 'lengua'},
+    {id:41, nombre: 'molleja', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/molleja.jpg', alt: 'molleja'},
+    {id:42, nombre: 'morcilla rosca', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/morcilla-rosca.jpg', alt: 'morcilla rosca'},
+    {id:43, nombre: 'morcilla', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/morcilla.jpg', alt: 'morcilla'},
+    {id:44, nombre: 'riñon', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/riñon.jpg', alt: 'riñon'},
+    {id:45, nombre: 'salchicha parrillera', precio: 1049.90, aviso: 'minimo de compra 0,5 kg', img: '../img/img_achuras_embutidos/salchicha-parrillera.jpg', alt: 'salchicha parrillera'}
 ]
