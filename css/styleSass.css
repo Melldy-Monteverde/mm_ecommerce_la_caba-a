@@ -141,6 +141,35 @@ header {
   color: #e14c41;
   position: unset; }
 
+.productoEnCarrito {
+  border-left: 5px solid #630000;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: darkcyan; }
+
+.productoEnCarrito:hover {
+  border-left: 5px solid #e14c41; }
+
+.boton-eliminar {
+  background-color: #efefef;
+  color: #630000;
+  border: none;
+  font-size: 20px; }
+
+.boton-eliminar:hover {
+  cursor: pointer; }
+
+.boton-eliminar:focus {
+  outline: none; }
+
+.loading {
+  margin: auto;
+  width: 43%; }
+
 footer {
   grid-area: pie;
   border-top: 2px solid #630000;

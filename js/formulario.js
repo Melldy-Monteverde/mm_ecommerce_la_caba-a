@@ -29,33 +29,33 @@ const validarForm = (e) => {
             if(expresiones.nombre.test(e.target.value)) {
                 document.getElementById('user_Name').classList.remove("form-incorrecto");
                 document.getElementById('user_Name').classList.add("form-correcto");
-                campos['user_Name'] = true;
+                campos['user_Name'] = true
             } else {
                 document.getElementById('user_Name').classList.add("form-incorrecto");
                 document.getElementById('user_Name').classList.remove("form-correcto");
-                campos['user_Name'] = false;
+                campos['user_Name'] = false
             }
         break;
         case "telefono":
             if(expresiones.telefono.test(e.target.value)) {
                 document.getElementById('user_Tel').classList.remove("form-incorrecto");
                 document.getElementById('user_Tel').classList.add("form-correcto");
-                campos['user_Tel'] = true;
+                campos['user_Tel'] = true
             } else {
                 document.getElementById('user_Tel').classList.add("form-incorrecto");
                 document.getElementById('user_Tel').classList.remove("form-correcto");
-                campos['user_Tel'] = false;
+                campos['user_Tel'] = false
             }
         break;
         case "email":
             if(expresiones.correo.test(e.target.value)) {
                 document.getElementById('user_Email').classList.remove("form-incorrecto");
                 document.getElementById('user_Email').classList.add("form-correcto");
-                campos['user_Email'] = true;
+                campos['user_Email'] = true
             } else {
                 document.getElementById('user_Email').classList.add("form-incorrecto");
                 document.getElementById('user_Email').classList.remove("form-correcto");
-                campos['user_Email'] = false;
+                campos['user_Email'] = false
             }       
         break;
     }
@@ -75,9 +75,9 @@ form.addEventListener("submit", (e) => {
 function enviarForm () {
     form.reset();
     // se muestra cuando el formulario se envia
-    form.lastElementChild.innerText = "Enviado con exito!";
-
-    borrarPostEnvio();
+    // form.lastElementChild.innerText = "Enviado con exito!";
+    avisoExitoso();
+    borrarPostEnvio()
 }
 
 function borrarPostEnvio() {
