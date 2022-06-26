@@ -9,9 +9,18 @@ function mostrarArticulosEmbutidos() {
                             <h5>${el.nombre}</h5>
                             <p>$${el.precio}</p>
                             <span>${el.aviso}</span>
-                            <button class="btn-agregar">Agregar al carrito</button>
-                            <button class="btn-borrar">Borrar del carrito</button>`;
-
+                            <button id="btnA${el.id}" class="btn-agregar">Agregar al carrito</button>
+                            <button id="btnB${el.id}" class="btn-borrar">Borrar del carrito</button>`;
         contenedorItems.appendChild(article);
+
+        let btnAgregar = document.getElementById(`btnA${el.id}`);
+        btnAgregar.addEventListener('click', () => {
+            agregarAlCarrito(el.id);
+        })
+        
+        let btnBorrar = document.getElementById(`btnB${el.id}`);
+        btnBorrar.addEventListener('click', () => {
+            borrarDelCarrito(el.id);
+        })
     })
 }
