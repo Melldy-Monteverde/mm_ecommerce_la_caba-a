@@ -76,15 +76,15 @@ function enviarForm () {
     form.reset();
     // se muestra cuando el formulario se envia
     // form.lastElementChild.innerText = "Enviado con exito!";
-    avisoExitoso();
+    sweetAlert();
     borrarPostEnvio()
 }
 
 function borrarPostEnvio() {
     // borra el msj de exito y el color de los campos despues de enviar el formulairo
-    setTimeout(() => {
-        document.getElementById("msjEnviado").remove();
-    }, 3000);
+    // setTimeout(() => {
+    //     document.getElementById("msjEnviado").remove();
+    // }, 3000);
 
     setTimeout(() => {
         document.getElementById("user_Name").classList.remove("form-correcto");
@@ -108,3 +108,13 @@ btnEnviar.addEventListener('mousemove', () => {
 bntBorrar.addEventListener('mousemove', () => {
     bntBorrar.title = 'Haga click para borrar el formulario.';
 })
+
+// sweet alert para formulario
+const sweetAlert = () => {
+    Swal.fire({
+        title: 'Enviado!',
+        text: 'Gracias por contactarnos!',
+        icon: 'success',
+        confirmButtonText: 'continuar'
+      })
+}
