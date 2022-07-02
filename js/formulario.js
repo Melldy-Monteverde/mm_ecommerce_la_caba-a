@@ -67,15 +67,15 @@ inputs.forEach((input) => {
 })
 
 // prevenir actualizacion del formulario
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-})
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+// })
 
 function enviarForm () {
     form.reset();
     // se muestra cuando el formulario se envia
     form.lastElementChild.innerText = "Enviado con exito!";
-    sweetAlert();
+    // sweetAlert();
     borrarPostEnvio()
 }
 enviarForm();
@@ -112,11 +112,11 @@ bntBorrar.addEventListener('mousemove', () => {
 
 // sweet alert para formulario
 // desactivado momentaneamente para poder manejar el formulario desde netlify
-const sweetAlert = () => {
-    Swal.fire({
-        title: 'Enviado!',
-        text: 'Gracias por contactarnos!',
-        icon: 'success',
-        confirmButtonText: 'continuar'
-      })
-}
+// const sweetAlert = () => {
+//     Swal.fire({
+//         title: 'Enviado!',
+//         text: 'Gracias por contactarnos!',
+//         icon: 'success',
+//         confirmButtonText: 'continuar'
+//       })
+// }
