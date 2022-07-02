@@ -67,15 +67,15 @@ inputs.forEach((input) => {
 })
 
 // prevenir actualizacion del formulario
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-// })
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
 
 function enviarForm () {
     form.reset();
     // se muestra cuando el formulario se envia
     form.lastElementChild.innerText = "Enviado con exito!";
-    // sweetAlert();
+    sweetAlert();
     borrarPostEnvio()
 }
 enviarForm();
@@ -98,9 +98,6 @@ function borrarPostEnvio() {
         document.getElementById("user_Email").classList.remove("form-correcto");
     }, 3000);
 
-    setTimeout(() => {
-        sweetAlert()
-    }, 5000)
 }
 
 // avisos en botones enviar y borrar
