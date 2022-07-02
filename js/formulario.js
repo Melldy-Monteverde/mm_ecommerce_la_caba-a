@@ -67,10 +67,9 @@ inputs.forEach((input) => {
 })
 
 // prevenir actualizacion del formulario
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    enviarForm();
-})
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+// })
 
 function enviarForm () {
     form.reset();
@@ -79,6 +78,7 @@ function enviarForm () {
     sweetAlert();
     borrarPostEnvio()
 }
+enviarForm();
 
 function borrarPostEnvio() {
     // borra el msj de exito y el color de los campos despues de enviar el formulairo
