@@ -76,7 +76,7 @@ function enviarForm () {
     form.reset();
     // se muestra cuando el formulario se envia
     // form.lastElementChild.innerText = "Enviado con exito!";
-    // sweetAlert();
+    sweetAlert();
     borrarPostEnvio()
 }
 
@@ -110,11 +110,11 @@ bntBorrar.addEventListener('mousemove', () => {
 })
 
 // sweet alert para formulario
-// const sweetAlert = () => {
-//     Swal.fire({
-//         title: 'Enviado!',
-//         text: 'Gracias por contactarnos!',
-//         icon: 'success',
-//         confirmButtonText: 'continuar'
-//       })
-// }
+const sweetAlert = () => {
+    Swal.fire({
+        title: 'Enviado!',
+        text: 'Gracias por contactarnos!',
+        icon: 'success',
+        confirmButtonText: 'continuar'
+      })
+}
