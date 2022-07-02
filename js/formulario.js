@@ -5,6 +5,10 @@ const inputs = document.querySelectorAll("#form input") // obtengo los inputs pa
 const btnEnviar = document.getElementById("btnEnviar");
 const bntBorrar = document.getElementById("btnBorrar");
 
+const btnVaciar = document.getElementById('btnVaciarCarrito');
+const contadorCarrito = document.getElementById('contadorCarrito');
+let carritoDeCompras = [];
+
 // Regex para validar campos
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos y hasta 40 caracteres.
@@ -120,3 +124,27 @@ bntBorrar.addEventListener('mousemove', () => {
 //         confirmButtonText: 'continuar'
 //       })
 // }
+
+// aqui use el operador ternario
+btnVaciar.addEventListener('click', (e) => {
+    e.preventDefault();
+    const vaciarCarro = (carritoDeCompras.length === 0) ? sweetAlertVaciar() : carritoDeCompras.length = 0;
+    contadorCarrito.length = 0;
+    actualizarCarrito()
+})
+
+function actualizarCarrito() {
+    contadorCarrito.innerText = carritoDeCompras.length;
+    let total = carritoDeCompras.reduce((acc, item) => acc + item.precio, 0);
+    console.log(`El valor del carrito es: $${total}`)
+}
+
+// alerta de carrito cuando esta vacio y se prsiona el boton vaciar
+const sweetAlertVaciar = () => {
+    Swal.fire({
+        title: 'Aviso!',
+        text: 'El carrito esta vacio!',
+        icon: 'info',
+        confirmButtonText: 'continuar'
+      })
+}
