@@ -97,6 +97,10 @@ function borrarPostEnvio() {
     setTimeout(() => {
         document.getElementById("user_Email").classList.remove("form-correcto");
     }, 3000);
+
+    setTimeout(() => {
+        sweetAlert()
+    }, 5000)
 }
 
 // avisos en botones enviar y borrar
@@ -111,11 +115,11 @@ bntBorrar.addEventListener('mousemove', () => {
 
 // sweet alert para formulario
 // desactivado momentaneamente para poder manejar el formulario desde netlify
-// const sweetAlert = () => {
-//     Swal.fire({
-//         title: 'Enviado!',
-//         text: 'Gracias por contactarnos!',
-//         icon: 'success',
-//         confirmButtonText: 'continuar'
-//       })
-// }
+const sweetAlert = () => {
+    Swal.fire({
+        title: 'Enviado!',
+        text: 'Gracias por contactarnos!',
+        icon: 'success',
+        confirmButtonText: 'continuar'
+      })
+}
