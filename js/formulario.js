@@ -74,17 +74,17 @@ inputs.forEach((input) => {
 function enviarForm () {
     form.reset();
     // se muestra cuando el formulario se envia
-    // form.lastElementChild.innerText = "Enviado con exito!";
-    sweetAlert();
+    form.lastElementChild.innerText = "Enviado con exito!";
+    // sweetAlert();
     borrarPostEnvio()
 }
 enviarForm();
 
 function borrarPostEnvio() {
     // borra el msj de exito y el color de los campos despues de enviar el formulairo
-    // setTimeout(() => {
-    //     document.getElementById("msjEnviado").remove();
-    // }, 3000);
+    setTimeout(() => {
+        document.getElementById("msjEnviado").remove();
+    }, 3000);
 
     setTimeout(() => {
         document.getElementById("user_Name").classList.remove("form-correcto");
@@ -110,11 +110,12 @@ bntBorrar.addEventListener('mousemove', () => {
 })
 
 // sweet alert para formulario
-const sweetAlert = () => {
-    Swal.fire({
-        title: 'Enviado!',
-        text: 'Gracias por contactarnos!',
-        icon: 'success',
-        confirmButtonText: 'continuar'
-      })
-}
+// desactivado momentaneamente para poder manejar el formulario desde netlify
+// const sweetAlert = () => {
+//     Swal.fire({
+//         title: 'Enviado!',
+//         text: 'Gracias por contactarnos!',
+//         icon: 'success',
+//         confirmButtonText: 'continuar'
+//       })
+// }
