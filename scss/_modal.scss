@@ -10,7 +10,7 @@ $secondaryBtnColor: #fff;
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,12 +27,13 @@ $secondaryBtnColor: #fff;
 
 .modal-carrito {
   position: relative;
-  background-color: white;
-  border: 1px solid rgb(225, 76, 65);
+  background-color: $primaryColorBG;
+  border: 1px solid $secondaryColorBG;
   min-width: 500px;
   padding: 20px;
   margin-top: -100%;
   transition: all 0.5s;
+  border-radius: 5px;
 }
 
 .modal-active .modal-carrito {
@@ -40,7 +41,7 @@ $secondaryBtnColor: #fff;
 }
 
 .modal-carrito h3 {
-  color: rgb(225, 76, 65);
+  color: $secondaryFontColor;
   padding-bottom: 5px;
 }
 .modal-carrito #carritoCerrar {
@@ -74,16 +75,14 @@ $secondaryBtnColor: #fff;
   padding: 5px 10px;
   display: flex;
   justify-content: space-evenly;
-  // width: 80%;
-
-  background-color: darkcyan;
+  width: 80%;
 }
 .productoEnCarrito:hover {
   border-left: 5px solid rgb(225, 76, 65);
 }
 
 .boton-eliminar {
-  background-color: $primaryColorBG;
+  background-color: #fff;
   color: $primaryBtnColor;
   border: none;
   font-size: 20px;

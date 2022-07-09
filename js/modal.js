@@ -1,11 +1,15 @@
-const verCarrito = document.getElementById('btnCarrito');
+const btnCarrito = document.getElementById('btnCarrito');
 const carritoCerrar = document.getElementById('carritoCerrar');
 
-const contenedorModal = document.getElementById('modal-contenedor');
+const contenedorModal = document.getElementById('modal-content');
 const modalCarrito = document.getElementsByClassName('modal-carrito');
 
-verCarrito.addEventListener('click', () => {
+btnCarrito.addEventListener('click', () => {
     contenedorModal.classList.toggle('modal-active');
+})
+
+verCarrito.addEventListener('submit', (e) => {
+    e.preventDefault();
 })
 
 carritoCerrar.addEventListener('click', () => {
@@ -14,7 +18,7 @@ carritoCerrar.addEventListener('click', () => {
 
 modalCarrito.addEventListener('click', (e) => {
         e.stopPropagation();
-    })
+})
 
 contenedorModal.addEventListener('click', ()=>{
     carritoCerrar.click()
