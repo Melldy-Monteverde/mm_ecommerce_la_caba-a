@@ -1,0 +1,38 @@
+[
+    {
+        "id": 24,
+        "nombre": "milanesa de pollo",
+        "precio": 1049.9,
+        "cantidad": "1",
+        "aviso": "minimo de compra 1 kg",
+        "img": "../img/img_aves/milanesas-pollo.jpg",
+        "alt": "milanesa de pollo"
+    },    
+    {
+        "id": 25,
+        "nombre": "pata y muslo",
+        "precio": 1049.9,
+        "cantidad": "1",
+        "aviso": "minimo de compra 1 kg",
+        "img": "../img/img_aves/pata-muslo.jpg",
+        "alt": "pata muslo"
+    },
+    {
+        "id": 26,
+        "nombre": "pollo entero",
+        "precio": 1049.9,
+        "cantidad": "1",
+        "aviso": "minimo de compra 1 kg",
+        "img": "../img/img_aves/pollo-entero.jpg",
+        "alt": "pollo entero"
+    },
+    {
+        "id": 27,
+        "nombre": "supremas",
+        "precio": 1049.9,
+        "cantidad": "1",
+        "aviso": "minimo de compra 1 kg",
+        "img": "../img/img_aves/supremas.jpg",
+        "alt": "supremas"
+    }
+]
